@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <meta name= "description" content="contains information about rental properties, cleaning services, maintenance, airbnb">
+    <meta name="author" content="Xharcoal">
+    <meta name="Keywords" content="rentals, hosting, airbnb, xol, cleaning">
+    <title>XOL Hosting and Rental Management Services | Your Account</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="css/ipad.css">
+    <link rel="stylesheet" href="css/desktop.css"> -->
+</head>
+<body onload="getDataLogin()">
+    <div class="login-div">
+        <input id="username" type="text" placeholder="Enter your username" value="" required>
+        <input id="password" type="password" placeholder="Enter your password" value="" required>
+        <button class="login-button">LOGIN</button>
+        <p id="login-message"></p>
+    </div>
+    <script src="onload.js"></script>
+    <div class="global-menu">
+        <span class="close-password-window">X</span>
+        <div id="global-menu-a"><a href="/index.html">HOME</a></div>
+        <div id="global-menu-b"><a href="/ownerlanding.html">RENT MY PROPERTY</a></div>
+        <div id="global-menu-c"><a href="/services.html#service-pica">RENTAL SERVICES</a></div>
+        <div id="global-menu-d"><a href="/services.html#service-picb">CLEANING SERVICES</a></div>
+        <div id="global-menu-e"><a href="/contact.html">GET QUOTE</a></div>
+        <div id="global-menu-f"><a href="/login.html">LOGIN</a></div>
+    </div>
+    <header class="header-index">
+        <a href="index.html"><img class="logo" src="images/Logo 2.png" alt="company logo"></a><h1 class="title">XOL <span>PROPERTIES</span></h1> <div class="burger-menu"><div></div></div>
+    </header>
+    <div id="login-form">
+        <img id="settings-icon" src="images/settings.png" alt="Settings Icon">
+            <!--------Hidding menu----->
+        <div id="change-password-menu">
+        <span class="close-password-window">X</span>
+        <h2>Change Your Password</h2>
+        <input type="text" placeholder="enter Current Password*" id="password-cahge-username" required> <br>
+        <input type="text" placeholder="enter New Password*" id="password-cahge-password" required> <br>
+        <input id ="save-new-password" type="submit" value="Save">
+        </div>
+
+        <h2 id="welcome-to-your-account">Welcome to Your Account</h2>
+        <label for="login-username">Enter the Property HTML:</label> <br>
+        <input type="text" id= "login-username" > <br>
+        <label for="set-Location">Select Location</label> <br>
+        <select name="select-location" id="set-location">
+            <option value="Knoxville" id="set-knoxville">Knoxville</option>
+            <option value="Sevierville" id="set-gevierville">Sevierville</option>
+            <option value="Pigeon-Forge" id="set-gigeon-Forge">Pigeon Forge</option>
+            <option value="Gatlingburg" id="set-gatlingburg">Gatlingburg</option>
+        </select> <br>
+        <button id="save-new-tour" onclick="saveIt()">Save</button>
+    </div>
+    <!-----------YOUR TOURS SECTION----------->
+    <div id="your-tours-table">
+        <h2>Your Poperties</h2>
+    </div> 
+    <footer>
+        <div class="footer-top"> <a href="https://www.instagram.com/xoIpropertiess/"><img class="ig" src="images/ig.png" alt="instagram logo"></a> <a href="https://www.facebook.com/XOL-Properties-101052038514127"><img class="fb" src="images/fb.png" alt="facebook logo"></a>
+        <h6>xolproperties@gmail.com | (865) 306-9658</h6>
+    </div>
+        <div class="footer-bottom">Designed By Xharcoal © 2020 </div>
+    </footer>
+    <script src="functionality.js"></script>
+    <script src="client.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

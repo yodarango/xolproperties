@@ -1,0 +1,22 @@
+{
+  "name": "selfie-data",
+  "version": "1.0.0",
+  "description": "This is another demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "keywords": [
+    "demo",
+    "test",
+    "learning"
+  ],
+  "author": "Daniel rangel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.6"
+  }
+}
