@@ -83,6 +83,6 @@ const options2 =
 const response = await fetch('/delete', options2)
 const json = await response.json(x)
  console.log(json)
- window.location.href = window.location.href;
+ window.location.href = window.location.href; //if you have issues try deleteing this
 }
 

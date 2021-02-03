@@ -14,7 +14,7 @@ closeMenu.addEventListener('click', () =>
 {
     globalMenu.style.display = 'none';
     closeMenu.style.display ='none';
-    menuButton.style.display = 'block';
+    menuButton.style.display = 'flex';
 })
 //referesh the navigated window on load
 let globalMenuDiv = document.querySelectorAll('#global-menu-a', '#global-menu-b', '#global-menu-c', '#global-menu-d', '#global-menu-e');

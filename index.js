@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const fs  = require('fs');
 const Datastore = require('nedb');
 let port = 3000;
 

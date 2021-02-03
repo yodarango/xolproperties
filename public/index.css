@@ -70,7 +70,8 @@ width: 50px;
 }
 .logo, .header-ownerlanding .logo
 {
-    width: 6rem;
+    width: 6rem ;
+    height: 6rem;
 }
 .title
 {
@@ -90,11 +91,18 @@ color: var(--second-main-color);
 }
 .burger-menu
 {
-    height: 6rem;
-    width: 6rem;
+    height: 3rem;
+    width: 5rem;
     z-index: 6;
     position: relative;
     grid-column: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+    border: 2px solid black;
+    margin: 1rem 1rem 0 0;
+    font-weight: 800;
 }
 .burger-menu-contact
 {
@@ -396,30 +404,32 @@ grid-template-columns: 1fr 3fr 1fr;
 }
 #slogan
 {
-    width: 18rem;
-    height: 18rem;
+    width: 90%;
+    max-width:350px;
+    height: 4rem;
     background: rgba(0, 0, 0, 0.336);
     position: relative;
     margin: auto;
-    top: 20vh;
+    top: 15vh;
     font-family: var(--accent-font);
     color: white;
-    font-size: 2.5rem;
-    display: flex;
+    font-size: 1.2rem;
+    /* display: flex; 2.0 */ 
     text-align: center;
-    padding-top: 4rem;
+    padding: 1rem 0 0 3rem;
     box-sizing: border-box;
+
 }
 #quotation-mark
 {
     position: absolute;
-    font-size: 3rem;
+    font-size: 2rem;
     border: 3px solid white;
     border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     top: 1rem;
-    left: 2rem;
+    left: 1rem; 
 }
 .curve
 {
