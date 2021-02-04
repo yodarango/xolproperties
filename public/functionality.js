@@ -17,11 +17,15 @@ closeMenu.addEventListener('click', () =>
     menuButton.style.display = 'flex';
 })
 //referesh the navigated window on load
-let globalMenuDiv = document.querySelectorAll('#global-menu-a', '#global-menu-b', '#global-menu-c', '#global-menu-d', '#global-menu-e');
+let globalMenuEl = document.querySelectorAll('.menu-option-el');
 
-globalMenuDiv.forEach.addEventListener('click', () =>
+globalMenuEl.forEach((element)=> 
 {
-location.reload();
+let globalMenu = document.querySelector('.global-menu');
+element.addEventListener('click', () => {
+    globalMenu.style.display = 'none';
+    menuButton.style.display = 'flex';
+});
 })
 });
 
