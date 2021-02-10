@@ -3056,6 +3056,20 @@ input[type="number"], select
     height: 3.3rem;
     border-radius: 1.8rem;
     font-size: 1.8rem;
+    max-width: 500px;
+}
+#login-div
+{
+position: relative;
+width: 100vw;
+max-width: 100vw;
+height: 80vh;
+z-index: 5;
+background: #adadad;
+border-radius: 0;
+top: 0;
+margin: 0;
+left: 0;
 }
 }
 @media only screen and (min-width: 1200px)
