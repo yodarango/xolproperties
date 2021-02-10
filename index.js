@@ -1,3 +1,5 @@
+const path = require('path')
+
 const express = require('express');
 const app = express();
 const Datastore = require('nedb');
@@ -7,6 +9,7 @@ app.listen(process.env.PORT || port, () => console.log(`listenign in port ${port
 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 const database = new Datastore('database.db');
 database.loadDatabase();
@@ -44,5 +47,34 @@ console.log(xx);
 database.remove({_id: xx}, {}, );
 })
 
+app.post('/login', (req, res)=>
+{
+    const userPassword = 'JU1120XOL'
+    const userUsername = 'xolproperties'
+    if(req.body.username === userUsername && req.body.password === userPassword)
+    {
+        res.redirect('/account.html')
+    }
+    else
+    {
+        res.redirect('/fail-login.html')
+    }
+    console.log(req.body)
+})
 
+// app.get('/account', function(req, res) ///// 2.0
+// {
+//     res.sendFile(path.join(__dirname + '/public/account.html'));
+// });
 
+// app.get('/filter/:location', (req, res)=>
+// {
+//     database.find({location: req.params.location}, (err, data) =>
+//     {
+//         if(err) {
+//             response.end();
+//             return;
+//         }
+//         res.json(data)
+//     });
+// })

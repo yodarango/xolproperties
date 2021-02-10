@@ -33,9 +33,13 @@ async function getData()
 
     for (item of data)
 {
+    let wrapperDiv = document.createElement('DIV');
+    wrapperDiv.setAttribute('class', item.location);
+    wrapperDiv.classList.add('location-wrapper')
     let frag = document.createRange().createContextualFragment(item.link);
     let newTour = document.querySelector('#tableee');
-    newTour.appendChild(frag)
+    wrapperDiv.appendChild(frag)
+    newTour.appendChild(wrapperDiv)
     console.log(item.link)
     console.log(frag)
 }
@@ -85,4 +89,28 @@ const json = await response.json(x)
  console.log(json)
  window.location.href = window.location.href; //if you have issues try deleteing this
 }
+
+//filtering results
+const locationIndex = document.querySelector('#location-index');
+
+locationIndex.addEventListener('change', async () =>
+{
+let location = locationIndex.options[locationIndex.selectedIndex].value;
+let locationWrapper = document.querySelectorAll('.location-wrapper');
+locationWrapper.forEach((element) =>
+{
+ let selectedOption = element.classList[0]
+ if(location !== selectedOption)
+ {
+    element.style.display = 'none'
+ }
+ else if(location === selectedOption)
+ {
+    element.style.display = 'block'
+ }
+})
+})
+
+
+
 
