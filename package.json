@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "devStart": "nodemon index.js"
+    "dev": " nodemon index.js"
   },
   "keywords": [
     "demo",
@@ -15,8 +15,19 @@
   "author": "Daniel rangel",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^9.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.7",
     "nedb": "^1.8.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

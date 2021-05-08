@@ -15,16 +15,10 @@
     <link rel="shortcut icon" type="image/jpg" href="images/Logo 2.png"/>
     <title>XOL Hosting and Rental Management Services | Your Account</title>
     <link rel="stylesheet" href="index.css">
-    <!-- <link rel="stylesheet" href="css/ipad.css">
-    <link rel="stylesheet" href="css/desktop.css"> -->
+
 </head>
 <body onload="getDataLogin()">
-    <!-- <div class="login-div">
-        <input id="username" type="text" placeholder="Enter your username" value="" required>
-        <input id="password" type="password" placeholder="Enter your password" value="" required>
-        <button class="login-button">LOGIN</button>
-        <p id="login-message"></p>
-    </div> 2.0-->
+
     <script src="onload.js"></script>
     <div class="global-menu">
         <span class="close-password-window">X</span>
@@ -36,8 +30,7 @@
         <div class="menu-option-el" id="global-menu-f"><a href="/login.html">◼️ LOGIN</a></div>
     </div>
     <header class="header-index">
-        <!-- <a href="index.html"><img class="logo" src="images/Logo 2.png" alt="company logo"></a><h1 class="title">XOL <span>PROPERTIES</span></h1> 2.0 -->
-        <!-- <div class="burger-menu"><div></div></div> 2.0-->
+
         <h1 class="title">XOL <span>PROPERTIES</span></h1> 
         <div class="burger-menu burger-menu-ownerlanding" >MENU</div>
     </header>
@@ -52,17 +45,20 @@
         <input id ="save-new-password" type="submit" value="Save">
         </div>
 
+        <form id="new-tour-form" action="/new-property" method="POST">
         <h2 id="welcome-to-your-account">Welcome to Your Account</h2>
-        <label for="login-username">Enter the Property HTML:</label> <br>
-        <input type="text" id= "login-username" > <br>
         <label for="set-Location">Select Location</label> <br>
-        <select name="select-location" id="set-location">
+        <select name="location" id="set-location">
             <option value="Knoxville" id="set-knoxville">Knoxville</option>
             <option value="Sevierville" id="set-gevierville">Sevierville</option>
             <option value="Pigeon-Forge" id="set-gigeon-Forge">Pigeon Forge</option>
             <option value="Gatlingburg" id="set-gatlingburg">Gatlingburg</option>
         </select> <br>
-        <button id="save-new-tour" onclick="saveIt()">Save</button>
+
+        <label for="login-username">Enter the Property HTML:</label> <br>
+        <textarea name="html" type="text" id= "place-iframe" placeholder="Enter your property's HTML"></textarea><br>
+        <button type="submit" id="save-new-tour">Save</button>
+    </form>
     </div>
     <!-----------YOUR TOURS SECTION----------->
     <div id="your-tours-table">

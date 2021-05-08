@@ -1,7 +1,7 @@
 async function saveIt() 
 {
     console.log('I have been clicked')
-            const link = document.querySelector('#login-username').value;
+            const link = document.querySelector('#place-iframe').value;
             const location = document.querySelector('#set-location').value;
         
         //this is the data that will be sent:

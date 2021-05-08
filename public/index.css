@@ -1152,7 +1152,7 @@ width: 100%;
 /**LOGIN PAGE STARTS**/
 #login-form
 {
-background: #979797;
+background: var(--fourth-color);
 height: 100vh;
 width: 100%;
 position: relative;
@@ -1164,7 +1164,6 @@ position: relative;
     top: 2rem;
     left: 2rem;
     display: block;
-    filter: opacity(0);
 }
 #change-password-menu
 {
@@ -1226,7 +1225,7 @@ font-size: 2rem;
 font-family: var(--second-font);
 color: white;
 width: 80%;
-margin: 20vh auto 10vh;
+margin: 14vh auto 10vh;
 text-align: center;
 }
 #login-form label
@@ -1239,13 +1238,24 @@ margin: auto;
 display: block;
 text-align: left;
 }
-#login-username, #set-location
+#set-location
 {
 width: 80%;
 height: 3rem;
 border-radius: 2rem;
 display: block;
 margin: auto;
+}
+#place-iframe{
+    height: 7rem;
+    resize: none;
+    width: 80%;
+    margin: auto;
+    display: block;
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    padding: .5rem;
+    border-radius: 1rem;
 }
 #save-new-tour
 {
@@ -1275,7 +1285,6 @@ flex-wrap: wrap;
 width: 90%;
 margin: 6rem auto 0;
 overflow-y: scroll;
-height: 100vh;
 }
 #your-tours-table h2
 {
@@ -1396,7 +1405,7 @@ position: relative;
 width: 100vw;
 height: 80vh;
 z-index: 5;
-background: #adadad;
+background: #F2F2F2; 
 border-radius: 0;
 top: 0;
 margin: 0;
@@ -1409,7 +1418,6 @@ margin: 0;
     height: 5vh;
     max-height: 10vh;
     border-radius: 3vh;
-    box-shadow: 2px 2px 5px #ffc2c2 inset;
     margin: 10vh auto 0;
     font-family: var(--main-font);
     color: var(--second-main-color);
@@ -1476,6 +1484,10 @@ margin: 0;
     font-size: 2rem;
     text-align: center;
     padding-top: 10rem;
+}
+#new-tour-form{
+    margin: 0 auto;
+    width: 100%;
 }
 /***********************************************************************************/
 /********                                                                ***********/
@@ -3065,7 +3077,7 @@ width: 100vw;
 max-width: 100vw;
 height: 80vh;
 z-index: 5;
-background: #adadad;
+background: #F2F2F2; 
 border-radius: 0;
 top: 0;
 margin: 0;
