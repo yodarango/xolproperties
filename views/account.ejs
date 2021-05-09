@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <meta name= "description" content="contains information about rental properties, cleaning services, maintenance, airbnb">
+    <meta name="author" content="Xharcoal">
+    <meta name="Keywords" content="rentals, hosting, airbnb, xol, cleaning">
+    <link rel="shortcut icon" type="image/jpg" href="images/Logo 2.png"/>
+    <title>XOL Hosting and Rental Management Services | Your Account</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="global-menu">
+        <span class="close-password-window">X</span>
+        <div class="menu-option-el" id="global-menu-a"><a href="/index.html">◼️ HOME</a></div>
+        <div class="menu-option-el" id="global-menu-b"><a href="/ownerlanding.html">◼️ RENT MY PROPERTY</a></div>
+        <div class="menu-option-el" id="global-menu-c"><a href="/services.html#service-pica">◼️ RENTAL SERVICES</a></div>
+        <div class="menu-option-el" id="global-menu-d"><a href="/services.html#service-picb">◼️ CLEANING SERVICES</a></div>
+        <div class="menu-option-el" id="global-menu-e"><a href="/contact.html">◼️ GET QUOTE</a></div>
+        <div class="menu-option-el" id="global-menu-f"><a href="/login">◼️ LOGIN</a></div>
+    </div>
+    <header class="header-index">
+
+        <h1 class="title">XOL <span>PROPERTIES</span></h1> 
+        <div class="burger-menu burger-menu-ownerlanding" >MENU</div>
+    </header>
+    <div id="account-half-wrapper">
+    <div id="login-form-account">
+        <img id="settings-icon" src="images/settings.png" alt="Settings Icon">
+            <!--------Hidding menu----->
+        <form action="update-password?_method=PATCH" method="POST" id="change-password-menu">
+        <h2>Change Your Password</h2>
+        <input type="text" placeholder="enter Current Password*" id="password-cahge-username" required name="username"> <br>
+        <input type="password" placeholder="enter New Password*" id="password-cahge-password" required name="password"> <br>
+        <button id ="save-new-password" type="submit">UPDATE</button>
+        <a id="logout" href="/logout">Log Out</a>
+        </form>
+
+        <form id="new-tour-form" action="/new-property" method="POST">
+        <h2 id="welcome-to-your-account">Welcome to Your Account</h2>
+        <label for="set-Location">Select Location</label> <br>
+        <select name="location" id="set-location">
+            <option value="Knoxville" id="set-knoxville">Knoxville</option>
+            <option value="Sevierville" id="set-gevierville">Sevierville</option>
+            <option value="Pigeon-Forge" id="set-gigeon-Forge">Pigeon Forge</option>
+            <option value="Gatlingburg" id="set-gatlingburg">Gatlingburg</option>
+        </select> <br>
+
+        <label for="login-username">Enter the Property HTML:</label> <br>
+        <textarea name="html" type="text" id= "place-iframe" placeholder="Enter your property's HTML"></textarea><br>
+        <button type="submit" id="save-new-tour">Save</button>
+    </form>
+    </div>
+
+        <!-----------YOUR TOURS SECTION----------->
+
+    <div id="your-tours-wrapper-account">
+        <% property.forEach(prop => {%>
+
+        
+        <div class="tour-holder-account <%=prop.location %> ">
+            <%-prop.html%>
+            <form id="button-wrapper-form" action="/delete-tour/<%=prop.id%>?_method=DELETE" method="POST">
+                <button class="delete-tour-button">DELETE</button>
+            </form>
+        </div>
+        <%   }) %> 
+    </div>
+
+
+</div>
+
+    <footer>
+        <div class="footer-top"> <a href="https://www.instagram.com/xol_properties"><img class="ig" src="images/ig.png" alt="instagram logo"></a> <a href="https://www.facebook.com/XOL-Properties-101052038514127"><img class="fb" src="images/fb.png" alt="facebook logo"></a>
+        <h6>xolproperties@gmail.com | (865) 679-9222</h6>
+    </div>
+        <div class="footer-bottom">Designed By Xharcoal © 2020 </div>
+    </footer>
+    <script src="functionality.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
