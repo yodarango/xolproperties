@@ -7,7 +7,7 @@ const bcrtypt          = require('bcrypt')
 const router           = express.Router();
 const methodOverride   = require('method-override')
 
-router.use             (express.static('public'));
+// router.use             (express.static('public'));
 router.use             (express.json());
 router.use             (express.urlencoded({extended: false}));
 router.use             (methodOverride('_method'))
