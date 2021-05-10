@@ -3193,7 +3193,7 @@ left: 0;
     flex-grow: 1;
     height: 100vh;
     overflow: scroll;
-    padding: 0 2rem;
+    padding: 0 2rem ;
 }
 .tour-holder-account{
 width: 400px;
@@ -3204,6 +3204,7 @@ margin: 0 1rem;
     width: 90%;
     margin-top: 15rem;
     align-items: flex-start;
+    padding: 0 .5rem;
 }
 .dark-bkg{
     position: fixed;

@@ -19,7 +19,7 @@
     <!-- <link rel="stylesheet" href="css/ipad.css">
     <link rel="stylesheet" href="css/desktop.css"> -->
 </head>
-<body  onload="getData()">
+<body>
     <div class="global-menu">
         <span class="close-password-window">X</span>
         <div class="menu-option-el" id="global-menu-a"><a href="/index.html">◼️ HOME</a></div>
@@ -29,11 +29,11 @@
         <div class="menu-option-el" id="global-menu-e"><a href="/contact.html">◼️ GET QUOTE</a></div>
         <div class="menu-option-el" id="global-menu-f"><a href="/login">◼️ LOGIN</a></div>
     </div>
-    <a href="index.html"><img class="logo" src="images/Logo 2.png" alt="company logo"></a>
+    <a href="/"><img class="logo" src="images/Logo 2.png" alt="company logo"></a>
     <header class="header-index">
-<!-- <a href="index.html"><img class="logo" src="images/Logo 2.png" alt="company logo"></a> 2.0 -->
+        
 <h1 class="title">XOL <span>PROPERTIES</span></h1> 
-<!-- <div class="burger-menu"><div></div></div> -->
+
 <div class="burger-menu" >MENU</div>
     </header>
 
@@ -67,9 +67,9 @@
     
     <div class="tour-holder-account <%=prop.location %> ">
         <%-prop.html%>
-        <form id="button-wrapper-form" action="/delete-tour/<%=prop.id%>?_method=DELETE" method="POST">
+        <!-- <form id="button-wrapper-form" action="/delete-tour/<%=prop.id%>?_method=DELETE" method="POST">
             <button class="delete-tour-button">DELETE</button>
-        </form>
+        </form> -->
     </div>
     <%   }) %> 
 </div>
@@ -86,6 +86,24 @@
         <div class="footer-bottom">Designed By Xharcoal © 2020 </div>
     </footer>
     <script src="functionality.js"></script>
-    <script src="client.js"></script>
+    
+    <script>
+
+        const locationFilter = document.querySelector('#location-index');
+
+        const allOptions = ['Knoxville', 'Sevierville', "Pigeon-Forge", "Gatlingburg"]
+        locationFilter.addEventListener('change', (e)=>{
+
+        allOptions.filter( option => { 
+            const propsToHide = document.querySelectorAll(`.${option}`);
+            propsToHide.forEach(prop => {prop.style.display = 'block'});
+
+            if(option != e.target.value ){
+                    propsToHide.forEach(prop => {prop.style.display = 'none'})
+            }
+        })
+            
+        })
+    </script>
 </body>
 </html>
