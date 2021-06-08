@@ -1936,19 +1936,6 @@ margin: 0;
         background-position:center;
         background-size: cover;
     }
-    /* #rental-cleaning-sections-textb
-    {
-        background: url(/images/4.jpg);
-        background-position:center;
-        background-size: cover;
-    }
-    
-    #rental-cleaning-sections-textc
-    {
-        background: url(/images/5.jpg);
-        background-position:center;
-        background-size: cover;
-    } */
     
     #rental-cleaning-sections-textd
     {
@@ -1956,29 +1943,7 @@ margin: 0;
         background-position:center;
         background-size: cover;
     }
-    /* 
-    #rental-cleaning-sections-texte
-    {
-        background: url(/images/green.jpg);
-        background-position:center;
-        background-size: cover;
-    }
-    
-    #rental-cleaning-sections-textf
-    {
-        background: url(/images/7.jpg);
-        background-position:center;
-        background-size: cover;
-    }
-    #rental-cleaning-sections-textg
-    {
-        background: url(/images/6.jpg);
-        background-position:center;
-        background-size: cover;
-    } */
-    
-    
-    /* height: 40rem; */
+
     
     /********CONTACT FORM******/
     #header-contact
@@ -2008,7 +1973,8 @@ margin: 0;
     form input[type="text"], 
     input[type="tel"], 
     input[type="email"], 
-    input[type="number"], select
+    input[type="number"],
+    input[type="password"], select
     {
     
         height: 3.3rem;
@@ -2215,7 +2181,7 @@ margin: 0;
     }
     #change-password-menu
     {
-        margin: -5% 5%;
+        margin: 5rem auto;
     }
     #your-tours-table
     {
@@ -2898,9 +2864,8 @@ height: calc(100vh + 10.80rem);
     }
     #change-password-menu
     {
-        margin: -5% 5%;
+        margin: 5rem auto;
         width: 50%;
-        margin-left: 25%;
     }
     #your-tours-table{
         display: flex;
@@ -3084,12 +3049,12 @@ form:not(#new-tour-form, #button-wrapper-form)
     position: relative;
     width: 55vw;
     max-width: 700px;
-    margin: 6rem 0 0 0;
+    margin: 5rem auto;
     border-radius: 2rem;
     padding-top: 2rem;
-    height: auto;
+    height: 500px;
     padding-bottom: 2rem;
-    right: -40vw;
+    /* right: -40vw; */
 }
 form input[type="text"], 
 input[type="tel"], 
@@ -3114,6 +3079,7 @@ top: 0;
 margin: 0;
 left: 0;
 }
+
 }
 @media only screen and (min-width: 1200px)
     {
