@@ -3,7 +3,7 @@ const session          = require('express-session')
 const passport         = require('passport');
 const LocalStrategy    = require('passport-local').Strategy;
 const MongoStore       = require('connect-mongo')
-const bcrtypt          = require('bcrypt')
+//const bcrtypt          = require('bcrypt')
 const router           = express.Router();
 const methodOverride   = require('method-override')
 
